@@ -75,7 +75,7 @@ Use the following commands to create the initial database `app.db`:
 ```console
 cd server
 flask db init
-flask db revision --autogenerate -m 'initial model'
+flask db migrate -m 'initial model'
 flask db upgrade head
 ```
 
@@ -93,7 +93,7 @@ Set serialization rules to limit the recursion depth.
 Run the migrations and seed the database:
 
 ```console
-flask db revision --autogenerate -m 'message'
+flask db migrate -m 'implement relationships'
 flask db upgrade head
 python seed.py
 ```
